@@ -10,31 +10,19 @@
 </head>
 
 <body>
+    @foreach ($posts as $post)
     <article>
-        <a href="/posts/my-first-post">
-            <h1>My First Post</h1>
-        </a>
-        <p>
-            asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd
-        </p>
+        <h1>
+            <a href="/posts/{{ $post->slug }}">
+                {!! $post->title !!}
+            </a>
+        </h1>
+        <div>
+            {{ $post->excerpt }}
+        </div>
     </article>
-    <article>
-        <a href="/posts/my-second-post">
-            <h1>My Second Post</h1>
-        </a>
+    @endforeach
 
-        <p>
-            asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd
-        </p>
-    </article>
-    <article>
-        <a href="/posts/my-third-post">
-            <h1>My Third Post</h1>
-        </a>
-        <p>
-            asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd sdfasdfgasdfgasd asdasdfsadfasdfasd
-        </p>
-    </article>
 </body>
 
 </html>
