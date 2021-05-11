@@ -9,14 +9,16 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $with = ['category', 'author'];
+
     public function category()
     {
         // hasOne, hasMany, belongsTo, belongsToMany
         return $this->belongsTo(Category::class);
     }
 
-    public function user()
+    public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
