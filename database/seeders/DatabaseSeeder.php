@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'John Boga',
         ]);
         Post::factory(5)->create(['user_id' => $user->id]);
-        Post::factory(15)->create(['user_id' => $user->id]);
+        Post::factory(15)->create();
     }
 }
