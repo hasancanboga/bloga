@@ -3,12 +3,8 @@
         <h1 class="text-4xl">
             Latest <span class="text-blue-500">Laravel From Scratch</span> News
         </h1>
-        <h2 class="inline-flex mt-3">By Lary Laracore <img src="/images/lary-head.svg" alt="Head of Lary the Mascot"></h2>
-        <p class="text-sm mt-14">
-            Another year. Another update. We're refreshing the popular Laravel series with new content. I'm
-            going to keep you guys up to speed with what's going on!
-        </p>
-        <div class="tw-flex tw-justify-center space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
+
+        <div class="tw-flex tw-justify-center space-y-2 lg:space-y-0 lg:space-x-4 mt-6">
             <!-- Category -->
             <div class="relative lg:inline-flex bg-gray-100 rounded-xl ">
 
@@ -33,7 +29,7 @@
                 </x-dropdown>
             </div>
             <!-- Other Filters -->
-            <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl ">
+            {{-- <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl ">
                 <select class="flex-1 appearance-none bg-transparent py-2 pl-2 pr-8 text-sm font-semibold">
                     <option value="category" disabled selected>Other Filters</option>
                     <option value="foo">Foo</option>
@@ -45,11 +41,11 @@
                         <path fill="#222" d="M13.854 7.224l-3.847 3.856 3.847 3.856-1.184 1.184-5.04-5.04 5.04-5.04z" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#d3cfc9;"></path>
                     </g>
                 </svg>
-            </div>
+            </div> --}}
             <!-- Search -->
             <div class="relative flex lg:inline-flex items-center bg-gray-100  rounded-xl px-3 py-2">
-                <form action="GET" action='#'>
-                    <input type="text" name='search' placeholder="Find Something" class="bg-transparent placeholder-black font-semibold text-sm">
+                <form method="get" action='#'>
+                    <input type="text" name='search' placeholder="Find Something" class="bg-transparent placeholder-black font-semibold text-sm" value="{{ request('search') }}">
                 </form>
 
             </div>

@@ -34,9 +34,9 @@
 
                         </div>
                     </div>
-                    <h1 class="text-4xl font-bold mb-10">{{ $post->title }}</h1>
-                    <div class="space-y-6 text-lg">
-                        {{ $post->body }}
+                    <h1 class="text-3xl lg:text-4xl font-bold mb-10">{{ $post->title }}</h1>
+                    <div class="space-y-4 lg:text-lg leading-loose">
+                        {!! $post->body !!}
                     </div>
 
                 </div>
