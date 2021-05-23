@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-<body style="font-family: Open Sans, sans-serif">
+<body style="font-family: Open Sans, sans-serif" class="bg-gray-900 text-white">
     <section class="px-6 py-8">
         <nav class="md:flex md:justify-between md:items-center">
             <div>
@@ -26,7 +26,7 @@
 
         {{ $slot }}
 
-        <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
+        <footer class="bg-gray-800 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
 
             <img src="/images/lary-newsletter-icon.png" alt="" class="mx-auto" style="width: 145px;">
 
@@ -34,14 +34,14 @@
             <p class="text-sm">Promise to keep the inbox clean. No bugs.</p>
 
             <div class="mt-10">
-                <div class="relative  inline-block mx-auto lg:bg-gray-200 rounded-full">
+                <div class="relative  inline-block mx-auto lg:bg-gray-700 rounded-full">
 
                     <form action="#" method="POST" class="lg:flex text-sm">
                         <div class="lg:py-3 lg:px-5 flex items-center">
                             <label for="email" class="hidden lg:tw-inline">
                                 <img src="/images/mailbox-icon.svg" alt="">
                             </label>
-                            <input type="text" placeholder="Your email address" class="lg:bg-transparent pl-4 focus-within:outline-none">
+                            <input type="text" placeholder="Your email address" class="bg-gray-700 rounded-xl p-3 lg:p-0 lg:bg-transparent pl-4 focus-within:outline-none">
                         </div>
 
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-6">Subscribe</button>

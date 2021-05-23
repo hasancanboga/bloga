@@ -1,6 +1,6 @@
 @props(['post'])
 
-<article {{ $attributes->merge(['class' => 'transition-colors duration-300 hover:bg-gray-100 rounded-xl border border-black border-opacity-0 hover:border-opacity-5']) }}>
+<article {{ $attributes->merge(['class' => 'transition-colors duration-300 hover:bg-gray-800 rounded-xl border border-black border-opacity-0 hover:border-opacity-5']) }}>
     <div class="py-6 px-5 ">
         <div>
             <img src="/images/illustration-3.png" alt="Blog Post Ilustration" class="rounded-xl">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="hidden lg:block">
 
-                    <a href="/posts/{{ $post->slug }}" class="text-xs font-semibold bg-gray-200 rounded-full py-2 px-8">Read More</a>
+                    <a href="/posts/{{ $post->slug }}" class="text-xs font-semibold bg-gray-700 rounded-full py-2 px-8">Read More</a>
                 </div>
                 </footer>
         </div>

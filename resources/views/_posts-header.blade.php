@@ -6,11 +6,11 @@
 
         <div class="tw-flex tw-justify-center space-y-2 lg:space-y-0 lg:space-x-4 mt-6">
             <!-- Category -->
-            <div class="relative lg:inline-flex bg-gray-100 rounded-xl ">
+            <div class="relative lg:inline-flex bg-gray-700 rounded-xl ">
 
                 <x-dropdown>
                     <x-slot name="trigger">
-                        <button class="py-2 pl-3 pr-9 text-sm font-semibold w-full lg:w:32 text-left px-3 text-left inline-flex">
+                        <button class="py-2 pl-3 pr-9 text-sm font-semibold w-full lg:w-32 text-left flex lg:inline-flex">
                             {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories' }}
                             <x-icon name='down-arrow' class="absolute pointer-events-none" style="right: 5px;"></x-icon>
                     </x-slot>
@@ -20,7 +20,7 @@
                     </x-dropdown-item>
 
                     @foreach ($categories as $category)
-                        <x-dropdown-item href="/categories/{{ $category->slug }}" :active='request()->is("categories/{$category->slug}")'>
+                        <x-dropdown-item href="/?category={{ $category->slug }}" :active='request()->is("categories/{$category->slug}")'>
                             {{ ucwords($category->name) }}
                         </x-dropdown-item>
 
@@ -43,9 +43,9 @@
                 </svg>
             </div> --}}
             <!-- Search -->
-            <div class="relative flex lg:inline-flex items-center bg-gray-100  rounded-xl px-3 py-2">
+            <div class="relative flex lg:inline-flex items-center bg-gray-700  rounded-xl px-3 py-2">
                 <form method="get" action='#'>
-                    <input type="text" name='search' placeholder="Find Something" class="bg-transparent placeholder-black font-semibold text-sm" value="{{ request('search') }}">
+                    <input type="text" name='search' placeholder="Find Something" class=" placeholder-gray-500 bg-transparent placeholder-black font-semibold text-sm" value="{{ request('search') }}">
                 </form>
 
             </div>
